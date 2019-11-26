@@ -70,9 +70,9 @@ var ExampleComponent = /** @class */ (function (_super) {
     }
     ExampleComponent.prototype.render = function () {
         var text = this.props.text;
-        return (createElement("div", { className: styles.test },
+        return createElement("div", { className: styles.test },
             "Example Component: ",
-            text));
+            text);
     };
     return ExampleComponent;
 }(Component));

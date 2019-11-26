@@ -74,9 +74,9 @@ var ExampleComponent = /** @class */ (function (_super) {
     }
     ExampleComponent.prototype.render = function () {
         var text = this.props.text;
-        return (React.createElement("div", { className: styles.test },
+        return React.createElement("div", { className: styles.test },
             "Example Component: ",
-            text));
+            text);
     };
     return ExampleComponent;
 }(React.Component));
