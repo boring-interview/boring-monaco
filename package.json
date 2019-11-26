@@ -1,9 +1,14 @@
 {
   "private": true,
   "devDependencies": {
-    "lerna": "^3.19.0"
+    "lerna": "^3.19.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "workspaces": {
+    "packages": [
+      "client",
+      "server"
+    ]
+  }
 }
