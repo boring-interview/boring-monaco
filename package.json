@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "eslint": "eslint --ext .tsx,.ts --fix ./src",
     "prettier-write": "prettier --list-different \"**/*.{ts,tsx,js,jsx,json,md}\" --write"
   },
   "devDependencies": {
@@ -11,9 +12,23 @@
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.1.0",
     "lerna": "^3.19.0",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn eslint",
+      "yarn prettier-write",
+      "git add"
+    ]
   },
   "workspaces": {
     "packages": [
